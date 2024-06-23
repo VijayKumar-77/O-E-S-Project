@@ -1,0 +1,89 @@
+user register
+{
+  "name": "janasena",
+  "email": "jo.com",
+  "password": "secret123"
+}
+
+user login
+{
+  "name": "janasena ",
+  "email": "jo.com",
+  "password": "secret123"
+}
+
+Admin register
+{
+  "name": "vijay",
+  "password": "admin123"
+}
+
+ admin login
+ {
+  "name": "vijay",
+  "password": "admin123"
+}
+
+add subject
+{
+  "name": "biology"
+}
+
+add exam
+{
+  "subject": {
+    "name": "biology"
+  },
+  "desc": "Mid-term Exam",
+  "date": "2024-07-15",
+  "marks": "100",
+  "totalQuestion": "40",
+  "passMarks": "50",
+  "level": "High"
+}
+
+add question
+{
+    "question_name": "What is the capital of 2 + 3?",
+    "option_one":   "1",   "option_two":  "2",
+    "option_three": "3",   "option_four": "5",
+    "answer": "5",
+    "sname_subject_name": {
+        "id": 9,
+        "name": "java"
+    },
+    "ename": {
+        "id": 1,
+        "name": "Midterm Exam"
+    }
+}
+
+ edit quetsion exisiting id
+{
+    "question_name": "What is the capital of Germany?",
+    "option_one": "Berlin",
+    "option_two": "Madrid",
+    "option_three": "Paris",
+    "option_four": "Rome",
+    "answer": "Berlin",
+    "sname_subject_name": {
+        "id": 1,
+        "name": "Geography"
+    },
+    "ename": {
+        "id": 1,
+        "name": "Final Exam"
+    }
+}
+
+save result
+{
+    "status": "Pass",
+    "score": "85%",
+    "examDate": "2024-06-23",
+    "totalMarks": "100",
+    "totalQuestion": "20",
+    "subjectId": 123,
+    "userEmail": "example@email.com",
+    "examId": 456
+}
