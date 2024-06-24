@@ -13,54 +13,54 @@ import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Result {
- 
-	   @Id
-	   @GeneratedValue(strategy = GenerationType.IDENTITY)
-	   private Long id;
-	   
-	   @Column(name="result_status")
-	   private String status;
-	   
-	   @Column(name="result_score")
-	   private String score;
-	   
-	   @Column(name="exam_date")
-	   private Date examDate;
-	   
-	   @Column(name="total_marks")
-	   private String totalMarks;
-	   
-	   @Column(name="total_question")
-	   private String totalQuestion;
-	   
-	   @ManyToOne
-	   @JoinColumn(name= "subject_id")
-	   private Subject sname;
-	   
-	   @Column(name= "user_email")
-	   private String email;
-	   
-	   @ManyToOne
-	   @JoinColumn(name= "exam_id", referencedColumnName = "id")
-	   private Exam examId;
-	   
-	   public Result() {
-	       // Default constructor
-	   }
 
-	   // Constructor with all fields except id
-	   public Result(String status, String score, Date examDate, String totalMarks, String totalQuestion, Subject sname, String email, Exam examId) {
-	       this.status = status;
-	       this.score = score;
-	       this.examDate = examDate;
-	       this.totalMarks = totalMarks;
-	       this.totalQuestion = totalQuestion;
-	       this.sname = sname;
-	       this.email = email;
-	       this.examId = examId;
-	   }
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-	   
+	@Column(name = "result_status")
+	private String status;
+
+	@Column(name = "result_score")
+	private String score;
+
+	@Column(name = "exam_date")
+	private Date examDate;
+
+	@Column(name = "total_marks")
+	private String totalMarks;
+
+	@Column(name = "total_question")
+	private String totalQuestion;
+
+	@ManyToOne
+	@JoinColumn(name = "subject_id")
+	private Subject sname;
+
+	@Column(name = "user_email")
+	private String email;
+
+	@ManyToOne
+	@JoinColumn(name = "exam_id", referencedColumnName = "id")
+	private Exam examId;
+
+	public Result() {
+		// Default constructor
+	}
+
+	// Constructor with all fields except id
+	public Result(String status, String score, Date examDate, String totalMarks, String totalQuestion, Subject sname,
+			String email, Exam examId) {
+		this.status = status;
+		this.score = score;
+		this.examDate = examDate;
+		this.totalMarks = totalMarks;
+		this.totalQuestion = totalQuestion;
+		this.sname = sname;
+		this.email = email;
+		this.examId = examId;
+	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -69,7 +69,6 @@ public class Result {
 		this.email = email;
 	}
 
-	
 	public Long getId() {
 		return id;
 	}
@@ -132,32 +131,27 @@ public class Result {
 
 	public void setExamId(Exam examId) {
 		this.examId = examId;
-	}   
-@Override
-public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    Result result = (Result) o;
-    return Objects.equals(id, result.id);
-}
+	}
 
-@Override
-public int hashCode() {
-    return Objects.hash(id);
-}
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+		if (o == null || getClass() != o.getClass())
+			return false;
+		Result result = (Result) o;
+		return Objects.equals(id, result.id);
+	}
 
-@Override
-public String toString() {
-    return "Result{" +
-            "id=" + id +
-            ", status='" + status + '\'' +
-            ", score='" + score + '\'' +
-            ", examDate=" + examDate +
-            ", totalMarks='" + totalMarks + '\'' +
-            ", totalQuestion='" + totalQuestion + '\'' +
-            ", sname=" + sname +
-            ", email='" + email + '\'' +
-            ", examId=" + examId +
-            '}';
-}
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public String toString() {
+		return "Result{" + "id=" + id + ", status='" + status + '\'' + ", score='" + score + '\'' + ", examDate="
+				+ examDate + ", totalMarks='" + totalMarks + '\'' + ", totalQuestion='" + totalQuestion + '\''
+				+ ", sname=" + sname + ", email='" + email + '\'' + ", examId=" + examId + '}';
+	}
 }

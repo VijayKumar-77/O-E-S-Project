@@ -9,7 +9,7 @@ import com.vijay.online_examination_system.model.Question;
 
 @Repository
 public interface QuestionRepository extends CrudRepository<Question, Integer> {
-	
+
 	public List<Question> findByEnameId(int id);
 
 }

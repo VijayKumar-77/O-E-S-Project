@@ -10,25 +10,25 @@ import jakarta.persistence.ManyToOne;
 @Entity
 public class Question {
 
-	  @Id
-	  @GeneratedValue(strategy = GenerationType.IDENTITY)
-	  private int id;
-	  
-	  @Column(name="question_name")
-	  private String question_name;
-	  private String option_one;
-	  private String option_two;
-	  private String option_three;
-	  private String option_four;
-	  
-	  @Column(name="question_answer")
-	  private String answer;
-	  
-	   @ManyToOne
-	   private Subject sname_subject_name;
-	   
-	   @ManyToOne
-	   private Exam ename;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@Column(name = "question_name")
+	private String question_name;
+	private String option_one;
+	private String option_two;
+	private String option_three;
+	private String option_four;
+
+	@Column(name = "question_answer")
+	private String answer;
+
+	@ManyToOne
+	private Subject sname_subject_name;
+
+	@ManyToOne
+	private Exam ename;
 
 	public int getId() {
 		return id;

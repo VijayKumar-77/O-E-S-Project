@@ -7,7 +7,7 @@ import com.vijay.online_examination_system.model.Result;
 
 @Repository
 public interface ResultRepository extends JpaRepository<Result, Long> {
-    List<Result> findByEmail(String email); 
+	List<Result> findByEmail(String email);
 
-    Result findById(long id); 
+	Result findById(long id);
 }

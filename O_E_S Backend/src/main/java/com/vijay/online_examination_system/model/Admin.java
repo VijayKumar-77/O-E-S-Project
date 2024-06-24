@@ -8,15 +8,15 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Admin {
-      @Id
-      @GeneratedValue(strategy = GenerationType.IDENTITY)
-	  private int id;
-	  
-      @Column(name="admin_name")
-	  private String name ;
-      
-      @Column(name="admin_password")
-	  private String  password ;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@Column(name = "admin_name")
+	private String name;
+
+	@Column(name = "admin_password")
+	private String password;
 
 	public int getId() {
 		return id;
@@ -41,4 +41,4 @@ public class Admin {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-      }
+}

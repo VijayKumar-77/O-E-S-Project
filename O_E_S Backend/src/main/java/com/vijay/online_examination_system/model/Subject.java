@@ -2,16 +2,14 @@ package com.vijay.online_examination_system.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class Subject {
-    
-    @Id
-	@Column(name="subject_name")
-	  private String name;
+
+	@Id
+	@Column(name = "subject_name")
+	private String name;
 
 	public String getName() {
 		return name;

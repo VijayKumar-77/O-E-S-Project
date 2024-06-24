@@ -7,7 +7,7 @@ import jakarta.transaction.Transactional;
 
 @Repository
 public interface SubjectRepository extends CrudRepository<Subject, String> {
-	
+
 	@Transactional
 	public int deleteByName(String name);
 

@@ -11,35 +11,33 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
-
 @Entity
 public class Exam {
-	  @Id
-	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    private int id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 
-	    @ManyToOne
-	    private Subject subject;
+	@ManyToOne
+	private Subject subject;
 
-	    @Column(name = "exam_desc")
-	    private String desc;
+	@Column(name = "exam_desc")
+	private String desc;
 
-	    @Column(name = "exam_date")
-	    @Temporal(TemporalType.DATE)
-	    private Date date;
+	@Column(name = "exam_date")
+	@Temporal(TemporalType.DATE)
+	private Date date;
 
-	    @Column(name = "exam_marks")
-	    private String marks;
+	@Column(name = "exam_marks")
+	private String marks;
 
-	    @Column(name = "exam_totalQuestion")
-	    private String totalQuestion;
+	@Column(name = "exam_totalQuestion")
+	private String totalQuestion;
 
-	    @Column(name = "exam_passMarks")
-	    private String passMarks;
+	@Column(name = "exam_passMarks")
+	private String passMarks;
 
-	    @Column(name = "exam_level")
-	    private String level;
-	    
+	@Column(name = "exam_level")
+	private String level;
 
 	public int getId() {
 		return id;

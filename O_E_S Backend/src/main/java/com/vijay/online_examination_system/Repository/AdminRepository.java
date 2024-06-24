@@ -6,7 +6,7 @@ import com.vijay.online_examination_system.model.Admin;
 
 @Repository
 public interface AdminRepository extends JpaRepository<Admin, Integer> {
-    Admin findByName(String name);
+	Admin findByName(String name);
 
-    Admin findByNameAndPassword(String name, String password);
+	Admin findByNameAndPassword(String name, String password);
 }

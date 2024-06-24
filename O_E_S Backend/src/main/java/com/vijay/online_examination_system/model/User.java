@@ -5,21 +5,19 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-
-
 @Entity
 @Table(name = "users")
 public class User {
-    
-	   @Column(name="user_name")
-	   private String name;
-	   
-	   @Id
-	   @Column(name="user_email")
-	   private String email;
-	   
-	   @Column(name="user_password")
-	   private String password;
+
+	@Column(name = "user_name")
+	private String name;
+
+	@Id
+	@Column(name = "user_email")
+	private String email;
+
+	@Column(name = "user_password")
+	private String password;
 
 	public String getName() {
 		return name;
@@ -46,4 +44,3 @@ public class User {
 	}
 
 }
-
