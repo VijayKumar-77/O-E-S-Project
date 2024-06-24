@@ -1,4 +1,4 @@
-user register
+user register                        
 {
   "name": "janasena",
   "email": "jo.com",
@@ -59,21 +59,19 @@ add question
 }
 
  edit quetsion exisiting id
-{
-    "question_name": "What is the capital of Germany?",
-    "option_one": "Berlin",
-    "option_two": "Madrid",
-    "option_three": "Paris",
-    "option_four": "Rome",
-    "answer": "Berlin",
-    "sname_subject_name": {
-        "id": 1,
-        "name": "Geography"
-    },
-    "ename": {
-        "id": 1,
-        "name": "Final Exam"
-    }
+ {
+  "question_name": "What is the capital of 2 + 5 + 3?",
+  "option_one":   "1",   "option_two":  "2",
+  "option_three": "3",   "option_four": "5",
+  "answer": "5",
+  "sname_subject_name": {
+      "id": 9,
+      "name": "java"
+  },
+  "ename": {
+      "id": 1,
+      "name": "Quaterly Exam"
+  }
 }
 
 save result
