@@ -44,13 +44,18 @@ public class Result {
 	@JoinColumn(name = "exam_id", referencedColumnName = "id")
 	private Exam examId;
 
+	@Column(name = "subject_name")
+	private String subjectName;
+
+	
+
 	public Result() {
 		// Default constructor
 	}
 
 	// Constructor with all fields except id
 	public Result(String status, String score, Date examDate, String totalMarks, String totalQuestion, Subject sname,
-			String email, Exam examId) {
+			String email, Exam examId, String subjectName) {
 		this.status = status;
 		this.score = score;
 		this.examDate = examDate;
@@ -59,6 +64,7 @@ public class Result {
 		this.sname = sname;
 		this.email = email;
 		this.examId = examId;
+		this.subjectName = subjectName;
 	}
 
 	public String getEmail() {
@@ -132,6 +138,14 @@ public class Result {
 	public void setExamId(Exam examId) {
 		this.examId = examId;
 	}
+	
+	public String getSubjectName() {
+		return subjectName;
+	}
+
+	public void setSubjectName(String subjectName) {
+		this.subjectName = subjectName;
+	}
 
 	@Override
 	public boolean equals(Object o) {
@@ -150,8 +164,9 @@ public class Result {
 
 	@Override
 	public String toString() {
-		return "Result{" + "id=" + id + ", status='" + status + '\'' + ", score='" + score + '\'' + ", examDate="
-				+ examDate + ", totalMarks='" + totalMarks + '\'' + ", totalQuestion='" + totalQuestion + '\''
-				+ ", sname=" + sname + ", email='" + email + '\'' + ", examId=" + examId + '}';
+		 return "Result{" + "id=" + id + ", status='" + status + '\'' + ", score='" + score + '\'' + ", examDate="
+	                + examDate + ", totalMarks='" + totalMarks + '\'' + ", totalQuestion='" + totalQuestion + '\''
+	                + ", subjectName='" + subjectName + '\'' + ", sname=" + sname + ", email='" + email + '\''
+	                + ", examId=" + examId + '}';
 	}
 }

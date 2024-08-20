@@ -11,9 +11,10 @@ public class ResultDTO {
 	private Long subjectId;
 	private String userEmail;
 	private Long examId;
+	private String subjectName;
 
 	public ResultDTO(String status, String score, Date examDate, String totalMarks, String totalQuestion,
-			Long subjectId, String userEmail, Long examId) {
+			Long subjectId, String userEmail, Long examId, String subjectName) {
 		super();
 		this.status = status;
 		this.score = score;
@@ -23,6 +24,15 @@ public class ResultDTO {
 		this.subjectId = subjectId;
 		this.userEmail = userEmail;
 		this.examId = examId;
+		this.subjectName = subjectName;
+	}
+
+	public String getSubjectName() {
+		return subjectName;
+	}
+
+	public void setSubjectName(String subjectName) {
+		this.subjectName = subjectName;
 	}
 
 	public String getStatus() {
